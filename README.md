@@ -3,19 +3,23 @@
 ## Tabla de Contenido<!-- omit in toc -->
 - [How to run](#how-to-run)
 
-# Cómo ejecutar
+<hr/>
 
-En un ambiente virtual
+See Django notes for this project  [here](/Docs/README.md)
+
+# How to run
+
+I a Python enviroment
 
 `pip freeze`
 
-Instalamos Django
+Install DJango
 
 `pip install Django`
 
-Al instalar tendremos disponible el comando Django Admin
+See command Django Admin
 
 `django-admin`
 
-Ejecutar el servidor
+Run the server app
 `python manage.py runserver`
