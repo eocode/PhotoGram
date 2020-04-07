@@ -22,4 +22,5 @@ See command Django Admin
 `django-admin`
 
 Run the server app
+
 `python manage.py runserver`
