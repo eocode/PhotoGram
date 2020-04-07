@@ -8,6 +8,9 @@
 - [Request y URL Dispatcher](#request-y-url-dispatcher)
 - [Debuguer](#debuguer)
 - [Crear una aplicación](#crear-una-aplicaci%c3%b3n)
+- [Patrones de diseño](#patrones-de-dise%c3%b1o)
+  - [MVC Model View Controller](#mvc-model-view-controller)
+  - [MTV Model Template View](#mtv-model-template-view)
 
 # Introducción
 
@@ -90,3 +93,19 @@ Agrega está linea para debuguear algo en consola
 # Crear una aplicación
 
 `python manage.py startapp posts`
+
+# Patrones de diseño
+
+Son una solución reutilizable a un problema común
+
+## MVC Model View Controller
+<div align="center">
+  <img src="images/2.png">
+  <small>MVC</small>
+</div>
+
+## MTV Model Template View
+<div align="center">
+  <img src="images/3.png">
+  <small>MTV</small>
+</div>
