@@ -11,6 +11,14 @@
 - [Patrones de diseño](#patrones-de-dise%c3%b1o)
   - [MVC Model View Controller](#mvc-model-view-controller)
   - [MTV Model Template View](#mtv-model-template-view)
+    - [Modelo](#modelo)
+    - [Templates](#templates)
+    - [Vista](#vista)
+- [Configuración de la base de datos](#configuraci%c3%b3n-de-la-base-de-datos)
+- [Documentación sobre los modelos y campos de Django](#documentaci%c3%b3n-sobre-los-modelos-y-campos-de-django)
+- [ORM](#orm)
+- [Migraciones](#migraciones)
+- [Shell Python Django integrada](#shell-python-django-integrada)
 
 # Introducción
 
@@ -92,6 +100,8 @@ Agrega está linea para debuguear algo en consola
 
 # Crear una aplicación
 
+App. Es un conjunto de código que se encarga de resolver una parte muy específica del proyecto, contiene sus modelos, vistas, url, etc
+
 `python manage.py startapp posts`
 
 # Patrones de diseño
@@ -109,3 +119,64 @@ Son una solución reutilizable a un problema común
   <img src="images/3.png">
   <small>MTV</small>
 </div>
+
+### Modelo
+Es la parte del proyecto que se encarga de estructurar las tablas y propiedades de la base de datos a través de clases de Python
+
+### Templates
+Archivos HTML que permiten la inclusión y ejecución de lógica especial para la presentación de datos
+
+### Vista
+Parte del proyecto que se encarga de la lógica de negocio y es la conexión entre el template y el modelo
+
+# Configuración de la base de datos
+ 
+https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+
+Para ver la base de datos SQLlite puedes usar
+https://sqlitebrowser.org/dl/
+
+# Documentación sobre los modelos y campos de Django
+https://docs.djangoproject.com/en/3.0/ref/models/fields/
+
+# ORM
+
+Object Relational Mapping. Es el encargado de permitir el acceso y control de una base de datos a través de una abstracción de clases y objetos
+
+Para hacer querys
+
+https://docs.djangoproject.com/en/3.0/topics/db/queries/
+
+# Migraciones
+
+Establecen un versionamiento de los cambios realizados en los modelos de nuestra base de datos
+
+`python manage.py migrate`
+
+Puedes crear una migración definiendo la estructura del modelo
+```python
+class User(models.Model):
+    """User model"""
+    email = models.EmailField(max_length=100)
+    password = models.CharField(max_length=100)
+
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+
+    birthdate = models.TextField(blank=True, null=True)
+    bio = models.TextField(blank=True)
+
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+```
+
+Para hacer la migración:
+
+`python manage.py makemigrations`
+
+Para ejecutarla
+
+`python manage.py migrate`
+
+# Shell Python Django integrada
+`python manage.py shell`
