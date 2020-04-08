@@ -11,6 +11,10 @@ from django.db.utils import IntegrityError
 # Models
 from django.contrib.auth.models import User
 
+def update_profile(request):
+    """Update a user's profile view"""
+    return render(request,'users/update_profile.html')
+
 def login_view(request):
     """Login view"""
     if request.method == 'POST':
