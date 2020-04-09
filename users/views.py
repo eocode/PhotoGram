@@ -11,7 +11,9 @@ from django.db.utils import IntegrityError
 from django.contrib.auth.models import User
 from users.models import Profile
 from users.forms import ProfileForm
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def update_profile(request):
     """Update a user's profile view"""
     profile = request.user.profile

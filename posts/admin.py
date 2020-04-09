@@ -7,7 +7,7 @@ from posts.models import Post
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'user', 'title', 'created', 'modified')
+    list_display = ('pk', 'user', 'title', 'photo', 'created', 'modified')
     list_display_links = ('pk','title')
     list_filter = ('user__username','title')
     search_fields = ('user__username','title')
