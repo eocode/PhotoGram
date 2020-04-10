@@ -1,5 +1,7 @@
 # :snake: Photogram<!-- omit in toc -->
 
+Instagram clone app with Python
+
 ## Tabla de Contenido<!-- omit in toc -->
 - [Preview](#preview)
 - [How to run](#how-to-run)
@@ -37,11 +39,12 @@ See Django notes for this project  [here](/Docs/README.md)
 
 # How to run
 
-I a Python enviroment
+In a Python enviroment
 
+`python -m venv env`
 `pip freeze`
 
-Install DJango
+Install dependences
 
 `pip install -r requirements`
 
